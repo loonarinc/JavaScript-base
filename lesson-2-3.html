@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson-2-3</title>
+</head>
+
+<body>
+    <script>
+        var a, b, result;
+        a = +prompt("Введите первое число");
+        b = +prompt("Введите второе число");
+        if (a>=0 && b>=0){
+            result= a-b;
+            alert("Оба числа >= 0, из разность равна "+result);
+        }
+        else if(a<0 && b<0){
+            result= a*b;
+            alert("Оба числа < 0, из произведение равно "+result);
+        }
+        else if((a<0 && b>=0)||((a>=0 && b<0))){
+            result= a+b;
+            alert("Числа разных знаков, их сумма равна "+result);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
