@@ -13,11 +13,11 @@
         b = +prompt("Введите второе число");
 
 
-        function summa(a, b) {
+        function sum(a, b) {
             return a + b;
         }
 
-        function raznost(a, b) {
+        function sub(a, b) {
             return a - b;
         }
 
@@ -25,35 +25,35 @@
             return a * b;
         }
 
-        function delenie(a, b) {
+        function div(a, b) {
             return a / b;
         }
         function mathOperation(arg1, arg2, operation) {
             switch (operation) {
-                case summa:
-                    return summa(arg1, arg2);
+                case sum:
+                    return sum(arg1, arg2);
                     break;
-                case raznost:
-                    return raznost(arg1, arg2);
+                case sub:
+                    return sub(arg1, arg2);
                     break;
                 case multi:
                     return multi(arg1, arg2);
                     break;
-                case delenie:
-                    return delenie(arg1, arg2);
+                case div:
+                    return div(arg1, arg2);
                     break;
                 default:
                     alert("Данные некорректны");
             }
         }
         if (!isNaN(a) && !isNaN(b)) {// Проверка на корректность
-            result = mathOperation(a, b, summa);
+            result = mathOperation(a, b, sum);
             alert("Сумма "+result);
-            result = mathOperation(a, b, raznost);
+            result = mathOperation(a, b, sub);
             alert("Разность "+result);
             result = mathOperation(a, b, multi);
             alert("Умножение "+result);
-            result = mathOperation(a, b, delenie);
+            result = mathOperation(a, b, div);
             alert("Деление "+result);
         }
         else{
