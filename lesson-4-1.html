@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson-4-1</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var number;
+        function getObjectFromNumber(number) {
+            var result = {};//Объявляем объект
+            if (number < 0 || number > 999 || isNaN(number)) {//проверяем диапазон чисел от 0 до 999, и что ввод есть число
+                console.log('Введено неверное число (от 0 до 999)');
+                return result; //возвращаем пустой объект, если ввод неверен
+            } else {
+                result['units'] = number % 10;//вычисляем единицы через остаток от деления на 10
+                result['decades'] = (number - result['units']) % 100 / 10; //аналогично десятки, предварительно вычитаем единицы
+                result['hundreds'] = (number - result['units'] - result['decades'] * 10) % 1000 / 100;//аналогично десятки, предварительно вычитаем единицы и десятки
+                return result;
+            }
+        }
+        number=+prompt('Введите число от 0 до 999');
+        console.log(getObjectFromNumber(number));
+
+    </script>
+
+</body>
+
+</html>
