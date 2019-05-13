@@ -8,25 +8,26 @@
 
 <body>
     <script type="text/javascript">
-        function isNatural(number) {
+        function isPrime(number) {
+            if(number < 2) {
+                return false;
+            }
             var i = 2;
-            while (i <= number / 2) {
-                if (number % i == 0) {
+            while (i <= number) {
+                if (number % i =0= 0) {
                     return false;
                 }
                 i++;
             }
             return true;
         }
-
-        var number = 2;
+        var number = 0;
         while (number <= 100) {
-            if (isNatural(number)) {
+            if (isPrime(number)) {
                 console.log(number);
             }
             number++;
         }
-
     </script>
 
 </body>
