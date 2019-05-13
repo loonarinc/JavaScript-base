@@ -12,13 +12,11 @@
                 name: 'Брюки',
                 quantity: 1,
                 prise: 1499,
-
             },
             {
                 name: 'Майка',
                 quantity: 3,
                 prise: 499,
-
             },
             {
                 name: 'Рубашка',
@@ -30,10 +28,8 @@
                 name: 'Ремень',
                 quantity: 2,
                 prise: 299,
-
             },
-        ]
-
+        ];
         var countBasketPrice = 0; //Стоимость корзины
         for (var i = 0; i < Object.keys(customerBasket).length; i++) {
             countBasketPrice += customerBasket[i].quantity * customerBasket[i].prise;
