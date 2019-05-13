@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson-3-2,3</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var customerBasket = [
+            //вид корзины - имя (но в будущем лучше использовать артикул ), кол-во, цена
+            ["Брюки", 1, 1499],
+            ["Майка", 3, 499],
+            ["Рубашка", 2, 799],
+            ["Ремень", 2, 299]
+        ];
+        var countBasketPrice = 0; //Стоимость корзины
+        for (var i = 0; i < customerBasket.length; i++) {
+            countBasketPrice += customerBasket[i][1] * customerBasket[i][2];
+        }
+        console.log("Итого: "+ countBasketPrice+" руб.");
+
+    </script>
+
+</body>
+
+</html>
