@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson-2-6</title>
+</head>
+
+<body>
+    <script>
+        var a, b, result;
+        a = +prompt("Введите первое число");
+        b = +prompt("Введите второе число");
+
+
+        function sum(a, b) {
+            return a + b;
+        }
+
+        function sub(a, b) {
+            return a - b;
+        }
+
+        function multi(a, b) {
+            return a * b;
+        }
+
+        function div(a, b) {
+            return a / b;
+        }
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case sum:
+                    return sum(arg1, arg2);
+                    break;
+                case sub:
+                    return sub(arg1, arg2);
+                    break;
+                case multi:
+                    return multi(arg1, arg2);
+                    break;
+                case div:
+                    return div(arg1, arg2);
+                    break;
+                default:
+                    alert("Данные некорректны");
+            }
+        }
+        if (!isNaN(a) && !isNaN(b)) {// Проверка на корректность
+            result = mathOperation(a, b, sum);
+            alert("Сумма "+result);
+            result = mathOperation(a, b, sub);
+            alert("Разность "+result);
+            result = mathOperation(a, b, multi);
+            alert("Умножение "+result);
+            result = mathOperation(a, b, div);
+            alert("Деление "+result);
+        }
+        else{
+            alert("Данные некорректны");
+        }
+
+    </script>
+
+</body>
+
+</html>
