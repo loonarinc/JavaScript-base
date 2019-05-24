@@ -132,12 +132,11 @@ function handleButtonClick(event) {
         customerCart.splice(event.target.parentNode.dataset.number, 1);
         init();
     }
-    if (event.target.getAttribute('id') == 'mini_img') {
+    if (event.target.id === 'mini_img') {
         var $modal = document.getElementById('myModal');
         var $large_img = document.getElementById('large_img');
         var $img = document.createElement('img');
         $img.setAttribute('id', 'large');
-        //console.log($img);
         $large_img.textContent = '';
         $large_img.appendChild($img);
         $img.setAttribute('src', product[event.target.parentNode.dataset.number - 1].large[0]);
@@ -154,14 +153,14 @@ function handleButtonClick(event) {
         //не доделано
 
     }
-    if (event.target.getAttribute('id') == 'nextButtonCart') {
+    if (event.target.id === 'nextButtonCart') {
         var $cart = document.getElementById('cart');
         var $address = document.getElementById('address');
         $cart.style.display = 'none';
         $address.style.display = 'block';
 
     }
-    if (event.target.getAttribute('id') == 'nextButtonAddress') {
+    if (event.target.id === 'nextButtonAddress') {
         var $addressArea = document.getElementById('addressArea');
         console.log($addressArea.value);
         var $address = document.getElementById('address');
@@ -172,7 +171,7 @@ function handleButtonClick(event) {
         } else
             alert('Вы не ввели адрес');
     }
-    if (event.target.getAttribute('id') == 'nextButtonComment') {
+    if (event.target.id === 'nextButtonComment') {
         alert('Ваш заказ принят в обработку');
         window.location.reload();
     }
