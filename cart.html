@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add to Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div id="modal-content" class="modal-content">
+            <span class="close">&times;</span>
+            <div id="large_img"></div>
+            <p>Some text in the Modal..</p>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="container-wrap">
+            <h1>Каталог товаров</h1>
+            <div id="catalog">
+
+            </div>
+        </div>
+        <div class="cart-wrap">
+            <h1>Корзина покупателя</h1>
+            <div id="cart">
+
+            </div>
+            <div id="address" class="address">
+                <h3>Введите адрес</h3>
+                <input id='addressArea' type="text"><br>
+                <button id='nextButtonAddress'>Далее</button>
+            </div>
+            <div id="comment" class="comment">
+                <h3>Комментарий (если нужно)</h3>
+                <textarea rows="10" cols="45" name="text"></textarea><br>
+                <button id='nextButtonComment'>Далее</button>
+            </div>
+        </div>
+    </div>
+    <script src="cart.js"></script>
+</body>
+
+</html>
